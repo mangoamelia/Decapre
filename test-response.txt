@@ -1,0 +1,92 @@
+HTTPI GET request to app.marketo.com (httpclient)
+SOAP request: https://516-GHI-083.mktoapi.com/soap/mktows/2_3
+SOAPAction: "http://www.marketo.com/mktows/syncLead", Content-Type: text/xml;charset=UTF-8, Content-Length: 810
+<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://www.marketo.com/mktows/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><ns1:AuthenticationHeader><mktowsUserId>3scale1_5079884253C6CB39BD2CB7</mktowsUserId><requestSignature>767e9ee9c8933de14e487726b6d320f7b7624d17</requestSignature><requestTimestamp>2014-11-11T17:30:06+01:00</requestTimestamp></ns1:AuthenticationHeader></SOAP-ENV:Header><SOAP-ENV:Body><ns1:paramsSyncLead><leadRecord><email>dd+14@3scale.net</email></leadRecord><marketoCookie>id:516-GHI-083&amp;token:_mch-net.dev-1415014274040-39979</marketoCookie><returnLead>false</returnLead></ns1:paramsSyncLead></SOAP-ENV:Body></SOAP-ENV:Envelope>
+HTTPI POST request to 516-GHI-083.mktoapi.com (httpclient)
+SOAP response (status 200)
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://www.marketo.com/mktows/"><SOAP-ENV:Body><ns1:successSyncLead><result><leadId>1183228</leadId><syncStatus><leadId>1183228</leadId><status>CREATED</status><error xsi:nil="true"/></syncStatus><leadRecord xsi:nil="true"/></result></ns1:successSyncLead></SOAP-ENV:Body></SOAP-ENV:Envelope>
+
+=> #<Savon::Response:0x000001017596d8
+ @globals=
+  #<Savon::GlobalOptions:0x0000010bf55a58
+   @options=
+    {:encoding=>"UTF-8",
+     :soap_version=>1,
+     :logger=>
+      #<Logger:0x0000010bf559e0
+       @default_formatter=
+        #<Logger::Formatter:0x0000010bf55990 @datetime_format=nil>,
+       @formatter=
+        #<Logger::SimpleFormatter:0x0000010bf55788 @datetime_format=nil>,
+       @level=0,
+       @logdev=
+        #<Logger::LogDevice:0x0000010bf55940
+         @dev=#<IO:<STDOUT>>,
+         @filename=nil,
+         @mutex=
+          #<Logger::LogDevice::LogDeviceMutex:0x0000010bf558c8
+           @mon_count=0,
+           @mon_mutex=#<Mutex:0x0000010bf557b0>,
+           @mon_owner=nil>,
+         @shift_age=nil,
+         @shift_size=nil>,
+       @progname=nil>,
+     :filters=>[],
+     :pretty_print_xml=>false,
+     :raise_errors=>true,
+     :strip_namespaces=>true,
+     :convert_response_tags_to=>
+      #<Proc:0x0000010bf55710@/Users/dd/.rvm/gems/ruby-2.1.2/gems/savon-2.0.0/lib/savon/options.rb:46 (lambda)>,
+     :wsdl=>"http://app.marketo.com/soap/mktows/2_3?WSDL",
+     :soap_header=>
+      {"ns1:AuthenticationHeader"=>
+        {"mktowsUserId"=>"3scale1_5079884253C6CB39BD2CB7",
+         "requestSignature"=>"767e9ee9c8933de14e487726b6d320f7b7624d17",
+         "requestTimestamp"=>"2014-11-11T17:30:06+01:00"}},
+     :endpoint=>"https://516-GHI-083.mktoapi.com/soap/mktows/2_3",
+     :open_timeout=>90,
+     :read_timeout=>90,
+     :namespace_identifier=>:ns1,
+     :env_namespace=>"SOAP-ENV",
+     :last_response=>
+      #<HTTPI::Response:0x00000101752d38
+       @body=
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/
+       @code=200,
+       @headers=
+        {"Date"=>"Tue, 11 Nov 2014 16:31:01 GMT",
+         "Server"=>"Apache",
+         "Content-Length"=>"474",
+         "Vary"=>"Accept-Encoding",
+         "Connection"=>"close",
+         "Content-Type"=>"text/xml; charset=utf-8",
+         "Set-Cookie"=>
+          "BIGipServerab03web_app_https=2500329738.47873.0000; path=/"},
+       @raw_body=
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/
+ @http=
+  #<HTTPI::Response:0x00000101752d38
+   @body=
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001
+   @code=200,
+   @headers=
+    {"Date"=>"Tue, 11 Nov 2014 16:31:01 GMT",
+     "Server"=>"Apache",
+     "Content-Length"=>"474",
+     "Vary"=>"Accept-Encoding",
+     "Connection"=>"close",
+     "Content-Type"=>"text/xml; charset=utf-8",
+     "Set-Cookie"=>
+      "BIGipServerab03web_app_https=2500329738.47873.0000; path=/"},
+   @raw_body=
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001
+ @locals=
+  #<Savon::LocalOptions:0x00000101d62660
+   @options=
+    {:advanced_typecasting=>true,
+     :response_parser=>:nokogiri,
+     :message=>
+      {:lead_record=>{:Email=>"dd+14@3scale.net"},
+       :marketoCookie=>"id:516-GHI-083&token:_mch-net.dev-1415014274040-39979",
+       :return_lead=>"false"}}>>
